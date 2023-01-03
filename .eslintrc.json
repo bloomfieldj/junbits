@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "next",
+    "prettier",
+    "next/core-web-vitals",
+    "plugin:jsx-a11y/strict"
+  ],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ]
+  }
+}
