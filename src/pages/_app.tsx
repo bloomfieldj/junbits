@@ -3,6 +3,13 @@ import { ThemeProvider } from "next-themes";
 import { createBrowserSupabaseClient } from "@supabase/auth-helpers-nextjs";
 import { SessionContextProvider, Session } from "@supabase/auth-helpers-react";
 import { useState } from "react";
+import { Inter } from "@next/font/google";
+
+const inter = Inter({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--inter-font",
+});
 
 export default function App({
   Component,
@@ -16,7 +23,9 @@ export default function App({
         supabaseClient={supabaseClient}
         initialSession={pageProps.initialSession}
       >
-        <Component {...pageProps} />
+        <main className={`${inter.variable} font-sans`}>
+          <Component {...pageProps} />
+        </main>
       </SessionContextProvider>
     </ThemeProvider>
   );
