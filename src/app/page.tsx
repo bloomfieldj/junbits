@@ -1,3 +1,5 @@
+import HabitTracker from "@/components/HabitTracker";
+
 export default function Page() {
   return (
     <div className="w-full max-w-7xl text-center">
@@ -7,6 +9,7 @@ export default function Page() {
       <h2 className="text-2xl text-sage-12">
         Simple & Collective Habit Tracking
       </h2>
+      <HabitTracker />
     </div>
   );
 }
