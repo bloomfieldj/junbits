@@ -2,16 +2,16 @@
 
 import { TooltipProvider } from "@radix-ui/react-tooltip";
 import {
+  BellOff,
   Book,
   Carrot,
   Edit3,
   GlassWater,
   HeartPulse,
+  Wind,
   LucideIcon,
-  BellOff,
 } from "lucide-react";
-import Toggle from "./Toggle";
-import Tooltip from "./Tooltip";
+import HabitToggle from "./HabitToggle";
 
 type Habit = {
   title: string;
@@ -21,7 +21,7 @@ type Habit = {
 const habits: Habit[] = [
   {
     title: "Meditating",
-    icon: Edit3,
+    icon: Wind,
   },
   {
     title: "Exercising",
@@ -36,11 +36,11 @@ const habits: Habit[] = [
     icon: Edit3,
   },
   {
-    title: "Water",
+    title: "Drinking Water",
     icon: GlassWater,
   },
   {
-    title: "Vegetables",
+    title: "Eating Vegetables",
     icon: Carrot,
   },
   {
@@ -54,17 +54,15 @@ export default function HabitTracker() {
     <section className="my-6">
       <h3 className="text-xl">Daily Goals</h3>
 
-      <fieldset className="my-6 flex w-full gap-4">
-        {habits.map((habit, index) => (
-          <TooltipProvider>
-            <Tooltip key={index} content={habit.title}>
-              <Toggle key={index} title={habit.title}>
-                <habit.icon />
-              </Toggle>
-            </Tooltip>
-          </TooltipProvider>
-        ))}
-      </fieldset>
+      <TooltipProvider>
+        <fieldset className="my-6 flex w-full gap-4">
+          {habits.map((habit, index) => (
+            <HabitToggle key={index} title={habit.title}>
+              <habit.icon />
+            </HabitToggle>
+          ))}
+        </fieldset>
+      </TooltipProvider>
     </section>
   );
 }
