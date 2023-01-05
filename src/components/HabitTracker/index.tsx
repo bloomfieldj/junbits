@@ -20,27 +20,27 @@ type Habit = {
 
 const habits: Habit[] = [
   {
-    title: "Meditating",
+    title: "Meditate",
     icon: Wind,
   },
   {
-    title: "Exercising",
+    title: "Exercise",
     icon: HeartPulse,
   },
   {
-    title: "Reading",
+    title: "Read",
     icon: Book,
   },
   {
-    title: "Journaling",
+    title: "Journal",
     icon: Edit3,
   },
   {
-    title: "Drinking Water",
+    title: "Drink Water",
     icon: GlassWater,
   },
   {
-    title: "Eating Vegetables",
+    title: "Eat Vegetables",
     icon: Carrot,
   },
   {
