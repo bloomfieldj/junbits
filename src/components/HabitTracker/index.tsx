@@ -51,11 +51,10 @@ const habits: Habit[] = [
 
 export default function HabitTracker() {
   return (
-    <section className="my-6">
-      <h3 className="text-xl">Daily Goals</h3>
-
+    <section className="mt-12 mb-20">
+      <h3 className="text-xl">My Habits</h3>
       <TooltipProvider>
-        <fieldset className="my-6 flex w-full gap-4">
+        <fieldset className="my-6 flex w-full items-center justify-center gap-4">
           {habits.map((habit, index) => (
             <HabitToggle key={index} title={habit.title}>
               <habit.icon />

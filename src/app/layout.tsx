@@ -27,7 +27,7 @@ export default async function RootLayout({
         className={`flex h-full flex-col bg-sage-1 text-sage-12 ${inter.variable} dark font-sans`}
       >
         <SupabaseListener accessToken={session?.access_token} />
-        <section className="mx-auto max-w-7xl p-4 sm:p-6 lg:p-8">
+        <section className="mx-auto w-full max-w-7xl p-4 sm:p-6 lg:p-8">
           {children}
         </section>
       </body>
