@@ -24,10 +24,12 @@ export default async function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth antialiased">
       <body
-        className={`flex h-full flex-col bg-slate-1 text-slate-12 ${inter.variable} dark font-sans`}
+        className={`flex h-full flex-col bg-sage-1 text-sage-12 ${inter.variable} dark font-sans`}
       >
         <SupabaseListener accessToken={session?.access_token} />
-        {children}
+        <section className="mx-auto max-w-7xl p-4 sm:p-6 lg:p-8">
+          {children}
+        </section>
       </body>
     </html>
   );
